@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="search-box">
+            <input type="text" id="comments-search-input" placeholder="Search comments...">
+            <input type="button" value="Search" onclick="filterComments()">
+        </div>
+    </header>
+    
+    <main class="container">
+        <article class="topic-container">
+            <header class="head">
+                <div class="authors">Author</div>
+                <div class="content">Topic: Random Topic</div>
+            </header>
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="#">Username</a></div>
+                    <div>Role</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="User Avatar">
+                    <div>Posts: <u>45</u></div>
+                    <div>Points: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    Just a random content of a random topic.<br>
+                    To see how it looks like.<br><br>
+                    Nothing more and nothing less.<br>
+                    <hr>
+                    Regards username
+                </div>
+            </div>
+        </article>
+
+        <div class="comment-area">
+            <textarea id="comment-input" placeholder="Comment here ..."></textarea>
+            <input type="button" value="Submit Comment" onclick="submitComment()">
+        </div>
+
+        <section id="comments-display" class="comments-container"></section>
+    </main>
+
+    <footer>
+        &copy; 2024 Your Forum. All rights reserved.
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
