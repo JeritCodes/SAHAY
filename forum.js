@@ -24,16 +24,17 @@ function addComment(text) {
     authorsDiv.classList.add("authors");
     authorsDiv.innerHTML = `
         <div class="username"><a href="#">You</a></div>
+        <div>Agricultural Expert</div>
         <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="User Avatar">
-        <div>Posts: <u>1</u></div>
-        <div>Points: <u>0</u></div>
+        <div>Posts: <u>57</u></div>
+        <div>Points: <u>6450</u></div>
     `;
 
     const contentDiv = document.createElement("div");
     contentDiv.classList.add("content");
     contentDiv.innerHTML = `
         ${text}<br>
-        <button onclick="showReply(this)">Reply</button>
+        <button onclick="showReply(this)" class="reply-btn">Reply</button>
         <div class="reply-container hide" style="display: none;"></div>
     `;
 
@@ -77,7 +78,7 @@ function addReply(text, button) {
 
     const replyContentDiv = document.createElement("div");
     replyContentDiv.classList.add("content");
-    replyContentDiv.innerHTML = `<div>You replied: ${text}</div>`;
+    replyContentDiv.innerHTML = `<div>J.Philip replied: ${text}</div>`;
 
     replyDiv.appendChild(replyContentDiv);
     replyContainer.appendChild(replyDiv);
