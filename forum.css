@@ -1,166 +1,205 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Global Styles */
 html {
-    font-size: 18px;
-    font-family: 'Titillium Web', sans-serif;
-    background-color: white;
-    color: #FFFFFF;
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif;
+  background-color: #f5f5f5; /* Lighter background color */
+  color: #333333; /* Darker text color */
 }
 
 body {
-    padding: 20px;
+  padding: 20px;
+  margin: 0;
 }
 
+/* Header */
 header {
-    background-color: green;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px; ;
+  /* background-color: #2980b9; Blue header color */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  color: #ffffff; /* White text for better contrast */
+  font-size: 24px;
 }
 
+/* Search Box */
 .search-box input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: white;
-    color: #FFF;
-    border: 1px solid #FF0042;
-    margin-right: 5px;
+  flex: 1;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc; /* Lighter border color */
+  margin-right: 20px;
 }
 
 .search-box input[type="button"] {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #FF0042;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #2b9846;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .search-box input[type="button"]:hover {
-    background-color: #D30035;
+  background: #12723d;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: "Titillium Web", sans-serif;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+p,
+textarea {
+  line-height: 1.6;
 }
 
 /* Topic Container */
 .topic-container {
-    background-color: lightgreen;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow for card effect */
 }
 
 .head {
-    display: flex;
-    padding: 15px;
-    background-color: limegreen;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  display: flex;
+  padding: 15px;
+  background-color: #2b98469c; /* Blue header color */
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff; /* White text for better contrast */
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .authors {
-    flex: 20%;
-    text-align: center;
+  flex: 20%;
+  text-align: center;
 }
 
-.username{
-    color: black;
+.username {
+  color: #333333; /* Darker text color */
 }
 
 .content {
-    flex: 80%;
-    padding: 10px;
+  flex: 80%;
+  padding: 10px;
 }
 
+/* Post Body */
 .body {
-    display: flex;
-    background-color: green;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 10px;
+  display: flex;
+  background-color: #f0f0f0; /* Lighter background color */
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .body .authors img {
-    width: 50px;
-    border-radius: 50%;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Comment Area */
 .comment-area {
-    background-color: wheat;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
+  background-color: #f5f5f5; /* Lighter background color */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .comment-area textarea {
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    border: 5px solid limegreen;
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc; /* Lighter border color */
 }
 
-.comment-area input[type="button"],.reply-btn {
-    background-color: #FF0042;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+.comment-area input[type="button"],
+.reply-btn {
+  background: #2b9846; /* Gradient button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.comment-area input[type="button"]:hover,
+.reply-btn:hover {
+  background: #12723d;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .reply-container {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
+/* Reply Area */
 .reply-area {
-    margin-top: 10px;
-    padding: 15px;
-    background-color: #2C2C2C;
-    border-radius: 5px;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f0f0f0; /* Lighter background color */
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .reply-area textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #2C2C2C;
-    color: #FFF;
-    border-radius: 5px;
-    border: 1px solid #FF0042;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f0f0f0; /* Lighter background color */
+  color: #333333; /* Darker text color */
+  border-radius: 5px;
+  border: 1px solid #dcdcdc; /* Lighter border color */
 }
 
 .reply-area input[type="button"] {
-    background-color: #FF0042;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.6s ease;
+  background: #2b9846; /* Gradient button */
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.reply-area input[type="button"]:hover,.comment-area input[type="button"]:hover,.reply-btn:hover{
-    background-color: #cc2b53;
-    transition: 0.6s ease;
-    color: black;
+.reply-area input[type="button"]:hover {
+  background: #12723d;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Footer */
 footer {
-    background-color: #2C2C2C;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    color: #FFF;
-    margin-top: 20px;
+  /* background: linear-gradient(90deg, #3498db, #2980b9); Gradient footer */
+  padding: 25px;
+  font-size: 9px;
+  text-align: center;
+  border-radius: 8px;
+  color: black; /* White text for better contrast */
+  margin-top: 20px;
+  box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.1);
 }
-
